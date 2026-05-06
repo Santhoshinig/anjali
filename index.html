@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Anjali! 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Google Fonts for elegant typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Lottie Web Component -->
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
+</head>
+
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicToggle" class="floating-btn hidden">
+        <span class="icon">🎵</span>
+    </button>
+
+    <!-- Opening Screen: Gift Box & Surprise -->
+    <section id="screen1" class="screen flex-center">
+        <div class="gift-container" id="giftBox">
+            <dotlottie-wc src="https://lottie.host/c12f574e-1fcc-46bf-a8c9-b7e7ea683a32/ycb3IuHnXx.lottie"
+                style="width: 300px; height: 300px; cursor: pointer;" autoplay loop></dotlottie-wc>
+            <p class="tap-text" style="margin-top: -30px;">Tap to open your surprise 🎁</p>
+        </div>
+
+        <div id="surpriseContent" class="surprise-content hidden">
+            <!-- Lottie Balloons on Sides -->
+            <div class="lottie-balloons left">
+                <dotlottie-wc src="https://lottie.host/b8d51f20-6e21-4630-b392-4d31909c1fac/iiLLvelqJD.lottie" autoplay
+                    loop></dotlottie-wc>
+            </div>
+            <div class="lottie-balloons right">
+                <dotlottie-wc src="https://lottie.host/b8d51f20-6e21-4630-b392-4d31909c1fac/iiLLvelqJD.lottie" autoplay
+                    loop></dotlottie-wc>
+            </div>
+
+            <!-- Fairy Lights Polaroid Gallery at the top -->
+            <div class="photo-string-container">
+                <div class="wire">
+                    <div class="fairy-light l1"></div>
+                    <div class="fairy-light l2"></div>
+                    <div class="fairy-light l3"></div>
+                    <div class="fairy-light l4"></div>
+                    <div class="fairy-light l5"></div>
+                </div>
+
+                <div class="photo-hanging polaroid-1">
+                    <div class="clip"></div>
+                    <img src="anj1.jpg" alt="Anjali 1">
+                </div>
+                <div class="photo-hanging polaroid-2">
+                    <div class="clip"></div>
+                    <img src="anj2.jpg" alt="Anjali 2">
+                </div>
+                <div class="photo-hanging polaroid-3">
+                    <div class="clip"></div>
+                    <img src="anj3.jpg" alt="Anjali 3">
+                </div>
+                <div class="photo-hanging polaroid-4">
+                    <div class="clip"></div>
+                    <img src="anj4.jpg" alt="Anjali 4" onerror="this.parentElement.style.display='none'">
+                </div>
+                <div class="photo-hanging polaroid-5">
+                    <div class="clip"></div>
+                    <img src="anj 5.png" alt="Anjali 5">
+                </div>
+                <div class="photo-hanging polaroid-6">
+                    <div class="clip"></div>
+                    <img src="anj 6.jpeg" alt="Anjali 6">
+                </div>
+            </div>
+
+            <h1 class="glow-text">Happy Birthday My Love❤️</h1>
+
+            <div class="giving-bouquet-animation">
+                <div class="bouquet-float-wrapper">
+                    <!-- For the best professional look, use a bouquet.png with a transparent background! -->
+                    <img src="b1.png" alt="Bouquet" class="giving-bouquet"
+                        onerror="this.src='https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <p>Scroll down</p>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Section: Heartfelt Quote -->
+    <section id="screen2" class="screen flex-center fade-in-section hidden" style="padding-top: 0; min-height: 70vh;">
+        <div class="letter-layout-wrapper">
+            <div class="side-photo-frame">
+                <img src="anj1.jpg" alt="Anjali">
+            </div>
+            <div class="envelope-container" onclick="toggleLetter()" style="cursor: pointer;">
+            <div class="envelope-back"></div>
+            <div class="letter">
+                <div class="letter-content">
+                    <button class="close-letter-btn">Fold Back ⬇</button>
+                    <p class="greeting">My dear Alagiii,</p>
+                    <p class="body">I wish you a happiest birthday, Eventhough I am not there on ur special day I am
+                        still in ur heart.<br><br>I wish u more and more happiness. All the best things will
+                        come to you. Enjoy ur day, make it very special. </p>
+                    <p class="sign-off">Love U di & Miss u so much.❤️</p>
+
+                    <div class="letter-photo">
+                        <img src="anj4.jpg" alt="Anjali">
+                    </div>
+                </div>
+            </div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section id="screen3" class="flex-center fade-in-section hidden"
+        style="padding: 0 2rem 5rem 2rem; margin-top: 20px; position: relative; z-index: 10;">
+        <div class="final-message" style="position: relative; z-index: 10;">
+            <h2 class="glow-text" style="font-size: 2rem; text-shadow: 2px 2px 15px rgba(0,0,0,0.5);">With lots of
+                love, from your Santho💝</h2>
+        </div>
+
+        <!-- Custom image in the right corner as requested -->
+        <div class="right-corner-image">
+            <img src="right.png" alt="Decoration">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
